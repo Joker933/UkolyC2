@@ -19,14 +19,40 @@
     
     div#herni_pole {
         /* Kod pro tyhle barvy jsem si pujčil z w3schools */
-        background-color: red; /* For browsers that do not support gradients */
-        background-image: linear-gradient(to bottom right, #42bcf5, #5a42f5); /* Standard syntax (must be last) */
-        border: #999 1px solid;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+        background-size: 1800% 1800%;
+        border: grey;
+        border-style: solid;
+        border-width: 1px;
+        -webkit-animation: rainbow 10s ease infinite;
+        -z-animation: rainbow 10s ease infinite;
+        -o-animation: rainbow 10s ease infinite;
+          animation: rainbow 10s ease infinite;
         padding: 24px;
         height: 80%;
         width: 70%;
         margin: 20px auto;
+    }
+
+    @-webkit-keyframes rainbow {
+        0%{background-position:0% 82%}
+        50%{background-position:100% 19%}
+        100%{background-position:0% 82%}
+    }
+    @-moz-keyframes rainbow {
+        0%{background-position:0% 82%}
+        50%{background-position:100% 19%}
+        100%{background-position:0% 82%}
+    }
+    @-o-keyframes rainbow {
+        0%{background-position:0% 82%}
+        50%{background-position:100% 19%}
+        100%{background-position:0% 82%}
+    }
+    @keyframes rainbow { 
+        0%{background-position:0% 82%}
+        50%{background-position:100% 19%}
+        100%{background-position:0% 82%}
     }
     
     .divcontainer {
@@ -36,4 +62,13 @@
         height: 25%;
         width: 50%;
         padding: 2%;
+    }
+
+    .cteverecek {
+        background-color: #1ddde8;
+        border: grey;
+        border-style: solid;
+        padding: 30px;
+        width: 50px;
+        float: left;
     }
