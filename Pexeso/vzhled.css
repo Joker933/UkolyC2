@@ -65,12 +65,12 @@
     }
 
     .cteverecek {
-        display: flex;
+        display:inline-block; 
         justify-content: center;
         align-items: center;
         font-size: 200%;
-        background-color: red; /* For browsers that do not support gradients */
-        background-image: linear-gradient(#42f5e3, #42f5b0);
+        background-color: white; /* For browsers that do not support gradients */
+        background-size: 1800% 1800%;
         border: #000 1px solid;
         border-radius: 15px;
         height: 20%;
@@ -78,4 +78,7 @@
         text-align: center;
         cursor: pointer;
         text-align: center;
+    }
+    #clear {
+        clear: both;
     }

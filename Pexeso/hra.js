@@ -1,4 +1,5 @@
 let memory_array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+let otocene_karty = 0;
 
 let array = [...memory_array, ...memory_array];
 
@@ -21,10 +22,9 @@ window.onload = function() {
     ctverecek.innerText = array[i];
     nacteni.appendChild(ctverecek);
     ctverecek.classList.add("cteverecek");
+    ctverecek.onclick = function(){
+      otocene_karty++;
+      console.log(otocene_karty);
+    }
   }
 }
-
-//function klik() {
-//  var x = document.getElementById("cteverecek").textContent;
-//}
-
