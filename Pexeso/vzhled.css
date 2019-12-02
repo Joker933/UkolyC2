@@ -68,7 +68,7 @@
         display:inline-block; 
         justify-content: center;
         align-items: center;
-        font-size: 200%;
+        font-size: 0%;
         background-color: white; /* For browsers that do not support gradients */
         background-size: 1800% 1800%;
         border: #000 1px solid;
@@ -79,6 +79,33 @@
         cursor: pointer;
         text-align: center;
     }
-    #clear {
-        clear: both;
+    .hidden {
+        display:inline-block; 
+        justify-content: center;
+        align-items: center;
+        font-size: 200%;
+        background-color: black; /* For browsers that do not support gradients */
+        background-size: 1800% 1800%;
+        border: #000 1px solid;
+        border-radius: 15px;
+        height: 20%;
+        width: 20%;
+        text-align: center;
+        cursor: pointer;
+        text-align: center;
+    }
+    .zasranej-style{
+        display:inline-block; 
+        justify-content: center;
+        align-items: center;
+        font-size: 200%;
+        background-color: blue; /* For browsers that do not support gradients */
+        background-size: 1800% 1800%;
+        border: #000 1px solid;
+        border-radius: 15px;
+        height: 20%;
+        width: 20%;
+        text-align: center;
+        cursor: pointer;
+        text-align: center;
     }

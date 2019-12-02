@@ -1,5 +1,7 @@
+
 let memory_array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 let otocene_karty = 0;
+let awesomeDivik = null;
 
 let array = [...memory_array, ...memory_array];
 
@@ -13,18 +15,19 @@ function shuffle(a) {
 
 let party = shuffle(array);
 console.log(party);
-
 window.onload = function() {
   let nacteni =  document.getElementById('herni_pole');
 
-  for(let i = 0; i < array.length; i++) {
-    let ctverecek = document.createElement('div');
+    awesomeDivik.className = 'ctvereck';
     ctverecek.innerText = array[i];
     nacteni.appendChild(ctverecek);
     ctverecek.classList.add("cteverecek");
+    ctverecek.setAttribute("hidden", true);
     ctverecek.onclick = function(){
+      ctverecek.setAttribute("style", "font-size: 200%;");
       otocene_karty++;
       console.log(otocene_karty);
     }
   }
-}
+
+
