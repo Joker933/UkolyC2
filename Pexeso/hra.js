@@ -17,8 +17,6 @@ let party = shuffle(array);
 console.log(party);
 window.onload = function() {
   let nacteni =  document.getElementById('herni_pole');
-
-    awesomeDivik.className = 'ctvereck';
     ctverecek.innerText = array[i];
     nacteni.appendChild(ctverecek);
     ctverecek.classList.add("cteverecek");
