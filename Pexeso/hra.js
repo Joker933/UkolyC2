@@ -1,9 +1,14 @@
-
 let memory_array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 let otocene_karty = [];
 let a;
 let b;
+let c=0;
+let e=0;
+let o=-1;
 let i = 0;
+let p = -1;
+let z = -1;
+let array2=[];
 
 
 let array = [...memory_array, ...memory_array];
@@ -17,48 +22,63 @@ function shuffle(a) {
 }
 
 let party = shuffle(array);
-console.log(party);
 
 window.onload = function() {
   let nacteni =  document.getElementById('herni_pole');
   for(let i = 0; i < array.length; i++) {
     let ctverecek = document.createElement('div');
-    ctverecek.addEventListener("click", () => {
-      if(a === null && b === null){
-        a = ctverecek.innerText;
-        console.log(a);
-      } else if(a != null && b === null) {
-        b = ctverecek.innerText;
-        console.log(b);
-      } else {
-
-      }
-
-      if(a === b) {
-        otocene_karty = a;
-        this.console.log(otocene_karty);
-      } else {
-        a = null;
-        b = null;
-        this.console.log(a);
-        this.console.log(b);
-      }
-      
-    });
-    ctverecek.innerText = array[i];
+    ctverecek.addEventListener("click", myFunction());
+      ctverecek.innerText = array[i];
     nacteni.appendChild(ctverecek);
     ctverecek.classList.add("cteverecek");
     ctverecek.setAttribute("hidden", true);
-    ctverecek.onclick = function(){
+    ctverecek.onclick = function(){     
       ctverecek.setAttribute("style", "font-size: 200%;");
-      i++;
-      if(i === 2){
-        i = 0;
-        ctverecek.setAttribute("style", "font-size: 0%;");
-      } else {
-        ctverecek.setAttribute("style", "font-size: 200%;");
-        i = i;
-      }
+      z++;
+      ctverecek.setAttribute("id", z);
+      o=z;
+      array2[e++] = array[i];
+      p++;
+      c++;
+      if(c%2 == 0){
+        p--;
+        if(array2[p] != array[i]){
+          e--;
+          o=z;
+          o--;
+          document.getElementById(o).setAttribute("style","font-size:200%;background-color: red;");
+          ctverecek.setAttribute("style","font-size:200%;background-color: red;");
+          setTimeout(
+            () => {
+              document.getElementById(o).setAttribute("style", "font-size: 0%; background-color: white;");
+              ctverecek.setAttribute("style", "font-size: 0%; background-color: white;");
+            },
+            1000
+          );
+        }else{
+          e--;
+          o=z;
+          o--;
+          document.getElementById(o).setAttribute("style", "font-size: 200%; background-color: lime;");
+          ctverecek.setAttribute("style", "font-size: 200%; background-color: lime;");
+        }
     }
+    } 
+}
+}
+function myFunction(){
+  if(a === null && b === null){
+    a = ctverecek.innerText;
+  } else if(a != null && b === null) {
+    b = ctverecek.innerText;
+  } else {
+
+  }
+
+  if(a === b) {
+    otocene_karty = a;
+  } else {
+    a = null;
+    b = null;
   }
 }
