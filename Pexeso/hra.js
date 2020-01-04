@@ -33,9 +33,9 @@ window.onload = function() {
     ctverecek.classList.add("cteverecek");
     ctverecek.setAttribute("hidden", true);
     ctverecek.onclick = function(){     
-      ctverecek.setAttribute("style", "font-size: 200%;");
+      ctverecek.setAttribute("style", "font-size: 200%;background-color: white;pointer-events: none;");
       z++;
-      ctverecek.setAttribute("id", z);
+      ctverecek.setAttribute("id", z); 
       o=z;
       array2[e++] = array[i];
       p++;
@@ -47,11 +47,13 @@ window.onload = function() {
           o=z;
           o--;
           document.getElementById(o).setAttribute("style","font-size:200%;background-color: red;");
-          ctverecek.setAttribute("style","font-size:200%;background-color: red;");
+          ctverecek.setAttribute("style","font-size:200%;background-color: red;"); 
+          document.getElementById("herni_pole").setAttribute("style", "pointer-events: none")
           setTimeout(
             () => {
               document.getElementById(o).setAttribute("style", "font-size: 0%; background-color: white;");
               ctverecek.setAttribute("style", "font-size: 0%; background-color: white;");
+              document.getElementById("herni_pole").setAttribute("style", "pointer-events: auto");
             },
             1000
           );
@@ -59,8 +61,8 @@ window.onload = function() {
           e--;
           o=z;
           o--;
-          document.getElementById(o).setAttribute("style", "font-size: 200%; background-color: lime;");
-          ctverecek.setAttribute("style", "font-size: 200%; background-color: lime;");
+          document.getElementById(o).setAttribute("style", "font-size: 200%; background-color: lime;pointer-events: none;");
+          ctverecek.setAttribute("style", "font-size: 200%; background-color: lime;pointer-events: none;");
         }
     }
     } 
